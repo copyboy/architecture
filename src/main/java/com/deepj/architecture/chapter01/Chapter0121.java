@@ -1,94 +1,89 @@
 package com.deepj.architecture.chapter01;
 
+
+import com.deepj.architecture.common.LangEnum;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
 /**
  * Java基础；语法糖及其实现机制
+ *
  * @author qingdong.zhang
  * @version 1.0
  * @since 2020-6-22-22:05
  */
 public class Chapter0121 {
-    public static void main(String[] args) {
 
-        // 1) switch case
-        int x = 3;
-        int w = 2^3;
-        System.out.println(w);
-        int y = switchCase(2^31);
-        System.out.println(y);
+    public static String switchStrCase(String name) {
 
-        String name = "name";
-        String name1 = new String("rues");
-        String name2 = new String("rues");
-        System.out.println(name1 == name2);
-        String person = switchNameCase(name1);
-        System.out.println(person);
-
-    }
-
-    private static String switchNameCase(String name) {
-
-        String person;
-        switch (name){
+        String personDeclaration;
+        switch (name) {
             case "job":
-                person = "job";
+                personDeclaration = "I'm job, I'm a student.";
                 break;
             case "mic":
-                person = "mic";
+                personDeclaration = "I'm mic, I work for APPLE.";
                 break;
             case "rues":
-                person = "rues";
+                personDeclaration = "I'm rues, I was a football player.";
                 break;
             default:
-                person = "deepj";
+                personDeclaration = "Hi, welcome to deepj's tutorial blog. ";
         }
-        return person;
+        return personDeclaration;
     }
 
-    private static int switchCase(int x) {
-        int y;
-        switch (x) {
-            case (byte)127:
-                y = 127;
+    public static String switchEnumCase(LangEnum lang) {
+
+        System.out.println("ordinal >>> " + lang.ordinal());
+
+        String lanLabel;
+        switch (lang) {
+            case JAVA:
+                lanLabel = "Java is simple.";
                 break;
-            case (short)128:
-                y = x+2;
+            case PHP:
+                lanLabel = "PHP is the best.";
                 break;
-            case 2^31:
-                y = 2^31-1;
-                break;
-            case (char)4:
-                y = 2^16;
-                break;
-            case 'a':
-                y = 2^16;
+            case PYTHON:
+                lanLabel = "Life is short you need python.";
                 break;
             default:
-                y = x;
+                lanLabel = "Talk is cheap, show me the code.";
         }
-        return y;
+        return lanLabel;
     }
 
-    private static int switchDoubleCase(double x) {
-        int y;
+    public static String switchIntCase(int x) {
+        String caseWhen;
         switch (x) {
-            case (byte)127:
-                y = 127;
+            case 'A':
+                caseWhen = "char case in int switch.";
                 break;
-            case (short)128:
-                y = (int)x+2;
+            case (byte) 127:
+                caseWhen = "byte case in int switch.";
                 break;
-            case 2^31:
-                y = 2^31-1;
+            case (short) 32767:
+                caseWhen = "short case in int switch.";
                 break;
-            case (char)4:
-                y = 2^16;
-                break;
-            case "adc":
-                y = 2^16;
+            case 0x7fffffff:
+                caseWhen = "int case in int switch.";
                 break;
             default:
-                y = (int)x;
+                caseWhen = "deepj's. int case default.";
         }
-        return y;
+        return caseWhen;
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        while (sc.hasNext()) {
+            String s = sc.nextLine();
+            System.out.println(LangEnum.JAVA.ordinal());
+            System.out.println(switchEnumCase(LangEnum.JAVA));
+            System.out.println(Arrays.toString(LangEnum.values()));
+        }
     }
 }
