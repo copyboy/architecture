@@ -6,5 +6,5 @@ package com.deepj.architecture.chapter01;
  * @version 1.0
  * @since 2020-6-22-22:04
  */
-public class Chapter0101 {
+public class Chapter01_1_1 {
 }

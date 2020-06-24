@@ -7,13 +7,13 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * Java基础；语法糖及其实现机制
+ * Java基础；语法糖及其实现机制 -> switch-case
  *
  * @author qingdong.zhang
  * @version 1.0
  * @since 2020-6-22-22:05
  */
-public class Chapter0121 {
+public class Chapter01_2_1 {
 
     public static String switchStrCase(String name) {
 
