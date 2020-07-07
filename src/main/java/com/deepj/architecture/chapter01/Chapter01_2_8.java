@@ -1,7 +1,5 @@
 package com.deepj.architecture.chapter01;
 
-import java.net.ServerSocket;
-
 /**
  * 断言
  *
