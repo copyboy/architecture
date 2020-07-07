@@ -9,4 +9,14 @@ package com.deepj.architecture.chapter01;
  */
 public class Chapter01_2_7 {
 
+
+    public static void main(String[] args) {
+        say();
+    }
+
+    private static void say() {
+        if (false) {
+            System.out.println("false not show.");
+        }
+    }
 }
