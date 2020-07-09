@@ -14,10 +14,11 @@ public class Chapter01_3_1 {
 
 //        System.out.println(forDigitTest(11, 36));
 //        otherJudge();
-        byteTest();
+//        byteTest();
     }
 
 
+    // char 字符 hashcode 与 转换方法 reverseBytes
     private static void character_test() {
 
         Character ch = new Character('A');
@@ -32,16 +33,19 @@ public class Chapter01_3_1 {
 
     }
 
+    // 去除  & 0xFF00
     public static char reverseBytes(char ch) {
         return (char) ((ch >> 8) | (ch << 8));
     }
 
+    // 数字转字符
     public static char forDigitTest(int digit, int radix) {
         char ret = Character.forDigit(digit, radix);
         System.out.println(">>> " + ret);
         return ret;
     }
 
+    // char 常用判断
     public static void otherJudge() {
         System.out.println(Character.isAlphabetic(12));
         System.out.println(Character.isDefined(12));
@@ -52,8 +56,13 @@ public class Chapter01_3_1 {
         System.out.println(Character.isLetterOrDigit('0'));
     }
 
+    // byte 测试
     public static void byteTest() {
         System.out.println(Byte.toUnsignedInt((byte) 'A'));
     }
 
+    // =========================== Integer 测试 ==============================
+    private static void intReverse() {
+//        Integer.reverse();
+    }
 }
